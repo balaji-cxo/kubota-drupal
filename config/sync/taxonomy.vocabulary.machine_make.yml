@@ -1,0 +1,9 @@
+uuid: e6ac2162-9bc7-416b-a38a-1293db0b25ba
+langcode: en
+status: true
+dependencies: {  }
+name: 'Machine Make'
+vid: machine_make
+description: 'Manufacturers used by machine compatibility.'
+weight: 0
+new_revision: false

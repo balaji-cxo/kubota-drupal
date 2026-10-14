@@ -1,0 +1,28 @@
+uuid: 7b109347-735d-4665-b6f0-0b5d9ae69c31
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_product_reviews
+    - node.type.product
+  module:
+    - comment
+id: node.product.field_product_reviews
+field_name: field_product_reviews
+entity_type: node
+bundle: product
+label: 'Product Reviews'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    status: 2
+default_value_callback: ''
+settings:
+  default_mode: 1
+  per_page: 20
+  anonymous: 0
+  form_location: false
+  preview: 0
+field_type: comment

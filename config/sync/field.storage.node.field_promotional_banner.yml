@@ -1,0 +1,20 @@
+uuid: 2db5eb93-a7f1-49e7-8967-a67aa8e06d9c
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_content
+    - node
+id: node.field_promotional_banner
+field_name: field_promotional_banner
+entity_type: node
+type: entity_reference
+settings:
+  target_type: block_content
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

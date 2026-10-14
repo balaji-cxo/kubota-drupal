@@ -1,0 +1,44 @@
+uuid: 1ef45b9f-2e16-4134-baf3-e791f7593c36
+langcode: en
+status: true
+dependencies:
+  config:
+    - comment.type.product_review
+    - field.field.comment.product_review.comment_body
+    - field.field.comment.product_review.field_rating
+  module:
+    - text
+id: comment.product_review.default
+targetEntityType: comment
+bundle: product_review
+mode: default
+content:
+  author:
+    weight: -2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  comment_body:
+    type: text_textarea
+    weight: 0
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_rating:
+    type: number
+    weight: 1
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  subject:
+    type: string_textfield
+    weight: 10
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden: {  }

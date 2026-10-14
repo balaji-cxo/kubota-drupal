@@ -1,0 +1,10 @@
+uuid: bb7a6a93-a3ff-4f65-9fb0-75e15a9048eb
+langcode: en
+status: true
+dependencies: {  }
+id: editorial_layout
+label: 'Layout Section'
+icon_uuid: null
+icon_default: null
+description: null
+behavior_plugins: {  }

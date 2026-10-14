@@ -1,0 +1,32 @@
+uuid: d46555c6-b962-457e-8949-a8ed3d839d32
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_editorial_sections
+    - node.type.dealer
+    - paragraphs.paragraphs_type.editorial_image
+    - paragraphs.paragraphs_type.editorial_layout
+    - paragraphs.paragraphs_type.editorial_products
+    - paragraphs.paragraphs_type.editorial_text
+  module:
+    - entity_reference_revisions
+id: node.dealer.field_editorial_sections
+field_name: field_editorial_sections
+entity_type: node
+bundle: dealer
+label: 'Editorial Sections'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      editorial_text: editorial_text
+      editorial_image: editorial_image
+      editorial_products: editorial_products
+      editorial_layout: editorial_layout
+field_type: entity_reference_revisions

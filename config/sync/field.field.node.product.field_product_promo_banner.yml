@@ -1,0 +1,27 @@
+uuid: 20933e89-c124-47af-ae4c-d220cc321dc2
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.banner
+    - field.storage.node.field_product_promo_banner
+    - node.type.product
+id: node.product.field_product_promo_banner
+field_name: field_product_promo_banner
+entity_type: node
+bundle: product
+label: 'PDP promotional banner'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:block_content'
+  handler_settings:
+    target_bundles:
+      banner: banner
+    sort:
+      field: _none
+    auto_create: false
+field_type: entity_reference

@@ -1,0 +1,27 @@
+uuid: b8123b3c-2324-47a6-8313-34a1c8744661
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_compatible_machines
+    - node.type.product
+    - taxonomy.vocabulary.machine_model
+id: node.product.field_compatible_machines
+field_name: field_compatible_machines
+entity_type: node
+bundle: product
+label: 'Compatible machine models'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      machine_model: machine_model
+    sort:
+      field: _none
+    auto_create: false
+field_type: entity_reference

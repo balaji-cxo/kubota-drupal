@@ -1,0 +1,27 @@
+uuid: 2449255b-8fab-4a88-b4aa-cb58976f0694
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_machine_make
+    - taxonomy.vocabulary.machine_make
+    - taxonomy.vocabulary.machine_model
+id: taxonomy_term.machine_model.field_machine_make
+field_name: field_machine_make
+entity_type: taxonomy_term
+bundle: machine_model
+label: Make
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      machine_make: machine_make
+    sort:
+      field: _none
+    auto_create: false
+field_type: entity_reference

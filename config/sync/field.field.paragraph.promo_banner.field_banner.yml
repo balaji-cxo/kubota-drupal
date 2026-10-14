@@ -1,0 +1,21 @@
+uuid: 87dcfe88-e22c-42bc-b287-e68857dc9985
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_banner
+    - paragraphs.paragraphs_type.promo_banner
+id: paragraph.promo_banner.field_banner
+field_name: field_banner
+entity_type: paragraph
+bundle: promo_banner
+label: Banner
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:block_content'
+  handler_settings: {  }
+field_type: entity_reference

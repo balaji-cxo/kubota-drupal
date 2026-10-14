@@ -1,0 +1,20 @@
+uuid: 3f9d0975-63bd-40e1-ab24-eba489f7e1a7
+langcode: en
+status: false
+dependencies:
+  theme:
+    - terra_gear
+_core:
+  default_config_hash: Q9_2whdOj1YIomfvsIfopROW4FT_X5pY0DjdOiOaQ5U
+id: terra_gear_primary_admin_actions
+theme: terra_gear
+region: primary_menu
+weight: -5
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  label_display: '0'
+  provider: core
+visibility: {  }

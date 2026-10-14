@@ -1,0 +1,21 @@
+uuid: 131fef94-4611-47b7-9c62-3a49f7eb4901
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_testimonials
+    - paragraphs.paragraphs_type.testimonial_slider
+id: paragraph.testimonial_slider.field_testimonials
+field_name: field_testimonials
+entity_type: paragraph
+bundle: testimonial_slider
+label: Testimonials
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:block_content'
+  handler_settings: {  }
+field_type: entity_reference

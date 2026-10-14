@@ -1,0 +1,9 @@
+name: Benefits strip
+status: stable
+props:
+  type: object
+  properties:
+    industrial:
+      type: boolean
+    tiles:
+      type: boolean

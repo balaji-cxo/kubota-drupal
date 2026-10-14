@@ -1,0 +1,11 @@
+{% if editorial_banner %}
+<section{{ attributes.addClass('container', 'promo-section', 'promo-section--split') }}>
+  <div class="promo-feature">
+    <div class="promo-banner" {% if editorial_banner.image %}style="--promo-image: url('{{ editorial_banner.image }}')"{% endif %}>
+      <div><span class="eyebrow">BUILT TO KEEP YOU MOVING</span><h2>{{ editorial_banner.heading }}</h2><p>{{ editorial_banner.text }}</p><a class="button button--light" href="{{ editorial_banner.cta_url ?: path('kubota_catalog.catalog') }}">{{ editorial_banner.cta_title ?: 'Learn More' }} →</a></div>
+    </div>
+    {{ include('terra_gear:benefits-strip', {tiles: true}) }}
+  </div>
+  {{ content.frontend_editing }}
+</section>
+{% endif %}

@@ -1,0 +1,7 @@
+name: Category card
+status: stable
+props:
+  type: object
+  properties:
+    category:
+      type: object

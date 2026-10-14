@@ -1,0 +1,31 @@
+kubota_catalog.home:
+  path: '/home'
+  defaults:
+    _controller: '\Drupal\kubota_catalog\Controller\PageController::home'
+    _title: 'Home'
+  requirements:
+    _permission: 'access content'
+
+kubota_catalog.catalog:
+  path: '/catalog'
+  defaults:
+    _controller: '\Drupal\kubota_catalog\Controller\PageController::catalog'
+    _title: 'All Products'
+  requirements:
+    _permission: 'access content'
+
+kubota_catalog.dealers:
+  path: '/dealers'
+  defaults:
+    _controller: '\Drupal\kubota_catalog\Controller\PageController::dealers'
+    _title: 'Find a Dealer'
+  requirements:
+    _permission: 'access content'
+
+kubota_catalog.compare:
+  path: '/compare'
+  defaults:
+    _controller: '\Drupal\kubota_catalog\Controller\PageController::compare'
+    _title: 'Compare Products'
+  requirements:
+    _permission: 'access content'

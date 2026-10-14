@@ -1,0 +1,14 @@
+<div class="container compare-page">
+  <nav class="breadcrumbs"><a href="{{ path('<front>') }}">Home</a><span>›</span><a href="{{ path('kubota_catalog.catalog') }}">All Products</a><span>›</span>Compare</nav>
+  <h1>Compare Products</h1>
+  {% if page_data.products %}
+  <div class="table-wrap"><table class="catalog-table compare-table"><thead><tr><th>Specification</th>{% for product in page_data.products %}<th><img src="{{ product.image }}" alt="" width="120"><br><a href="{{ product.url }}">{{ product.part_number }}</a></th>{% endfor %}</tr></thead><tbody>
+    <tr><th>Category</th>{% for product in page_data.products %}<td>{{ product.category }}</td>{% endfor %}</tr>
+    <tr><th>Width</th>{% for product in page_data.products %}<td>{{ product.width }} mm</td>{% endfor %}</tr>
+    <tr><th>Pitch</th>{% for product in page_data.products %}<td>{{ product.pitch }} mm</td>{% endfor %}</tr>
+    <tr><th>Links</th>{% for product in page_data.products %}<td>{{ product.links }}</td>{% endfor %}</tr>
+    <tr><th>Weight</th>{% for product in page_data.products %}<td>{{ product.weight }} kg</td>{% endfor %}</tr>
+    <tr><th>Application</th>{% for product in page_data.products %}<td>{{ product.application }}</td>{% endfor %}</tr>
+  </tbody></table></div>
+  {% else %}<p>Select products using the Compare checkboxes on the catalogue page.</p><a class="button button--accent" href="{{ path('kubota_catalog.catalog') }}">Browse Products</a>{% endif %}
+</div>

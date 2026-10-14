@@ -1,0 +1,23 @@
+uuid: d053153c-2944-49e4-8625-57f63f299163
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_pitch_mm
+    - node.type.product
+id: node.product.field_pitch_mm
+field_name: field_pitch_mm
+entity_type: node
+bundle: product
+label: 'Pitch (mm)'
+description: 'Rubber track specification.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: 0.0
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: decimal

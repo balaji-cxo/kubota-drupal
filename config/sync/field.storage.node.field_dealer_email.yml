@@ -1,0 +1,18 @@
+uuid: 664b069f-97c7-4aaf-967f-614e770ac1cf
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_dealer_email
+field_name: field_dealer_email
+entity_type: node
+type: email
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

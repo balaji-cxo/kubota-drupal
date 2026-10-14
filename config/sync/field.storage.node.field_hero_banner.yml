@@ -1,0 +1,20 @@
+uuid: ae52606c-7ed0-4c19-9b22-731a32d1ec25
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_content
+    - node
+id: node.field_hero_banner
+field_name: field_hero_banner
+entity_type: node
+type: entity_reference
+settings:
+  target_type: block_content
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

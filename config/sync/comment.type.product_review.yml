@@ -1,0 +1,8 @@
+uuid: a77ffff4-be18-408c-82c4-6d948ba8e687
+langcode: en
+status: true
+dependencies: {  }
+id: product_review
+label: 'Product Review'
+target_entity_type_id: node
+description: 'Editor-managed rating and review of a product.'

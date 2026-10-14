@@ -1,0 +1,12 @@
+terra_gear.mobile:
+  label: Mobile
+  mediaQuery: '(max-width: 47.99rem)'
+  weight: 0
+  multipliers:
+    - 1x
+terra_gear.desktop:
+  label: Desktop
+  mediaQuery: '(min-width: 48rem)'
+  weight: 1
+  multipliers:
+    - 1x

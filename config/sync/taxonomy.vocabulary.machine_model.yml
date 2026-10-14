@@ -1,0 +1,9 @@
+uuid: 4cfd2b4c-49f5-430f-b93d-d358e933c32b
+langcode: en
+status: true
+dependencies: {  }
+name: 'Machine Model'
+vid: machine_model
+description: 'A model with its make and machine type.'
+weight: 0
+new_revision: false

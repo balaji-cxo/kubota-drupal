@@ -1,0 +1,23 @@
+uuid: 36d5a30e-34a0-48a7-ac5f-adee2f76bbb9
+langcode: en
+status: true
+dependencies:
+  config:
+    - comment.type.product_review
+    - field.storage.comment.field_rating
+id: comment.product_review.field_rating
+field_name: field_rating
+entity_type: comment
+bundle: product_review
+label: Rating
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: 1
+  max: 5
+  prefix: ''
+  suffix: ''
+field_type: integer

@@ -1,0 +1,19 @@
+uuid: 988b3ca7-d9ba-4fb0-9903-a3b9714e786c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_heading
+    - paragraphs.paragraphs_type.editorial_image
+id: paragraph.editorial_image.field_heading
+field_name: field_heading
+entity_type: paragraph
+bundle: editorial_image
+label: Heading
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

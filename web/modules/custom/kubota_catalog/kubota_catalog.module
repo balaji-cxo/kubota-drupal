@@ -1,0 +1,70 @@
+<?php
+
+/**
+ * @file
+ * Presentation integration for TerraGear content.
+ */
+
+use Drupal\Core\Url;
+use Drupal\node\NodeInterface;
+use Drupal\kubota_catalog\CatalogData;
+
+/**
+ * Implements hook_theme().
+ */
+function kubota_catalog_theme(): array {
+  return [
+    'kubota_home' => [
+      'variables' => ['page_data' => []],
+    ],
+    'kubota_catalog' => [
+      'variables' => ['page_data' => []],
+    ],
+    'kubota_dealers' => [
+      'variables' => ['page_data' => []],
+    ],
+    'kubota_compare' => [
+      'variables' => ['page_data' => []],
+    ],
+  ];
+}
+
+/**
+ * Implements hook_preprocess_node().
+ */
+function kubota_catalog_preprocess_node(array &$variables): void {
+  $node = $variables['node'] ?? NULL;
+  if (!$node instanceof NodeInterface || $node->bundle() !== 'product') {
+    return;
+  }
+  $variables['product_data'] = CatalogData::product($node, TRUE);
+  $variables['related_products'] = [];
+  if ($node->hasField('field_related_products')) {
+    foreach ($node->get('field_related_products')->referencedEntities() as $related) {
+      if ($related instanceof NodeInterface && $related->isPublished()) {
+        $variables['related_products'][] = CatalogData::product($related);
+      }
+    }
+  }
+  $variables['dealer_url'] = Url::fromRoute('kubota_catalog.dealers', [], [
+    'query' => ['product' => $node->id()],
+  ])->toString();
+  $variables['machine_models'] = [];
+  $ids = \Drupal::entityQuery('taxonomy_term')->accessCheck(TRUE)
+    ->condition('vid', 'machine_model')->sort('name')->execute();
+  foreach (\Drupal::entityTypeManager()->getStorage('taxonomy_term')->loadMultiple($ids) as $term) {
+    $variables['machine_models'][] = ['id' => (int) $term->id(), 'label' => $term->label()];
+  }
+}
+
+/**
+ * Implements hook_taxonomy_menu_link_alter().
+ */
+function kubota_catalog_taxonomy_menu_link_alter(array &$link, $term): void {
+  if ($term->bundle() !== 'product_category') {
+    return;
+  }
+  $link['route_name'] = 'kubota_catalog.catalog';
+  $link['route_parameters'] = [];
+  $link['options']['query'] = $term->label() === 'All Products' ? [] : ['category' => $term->id()];
+}

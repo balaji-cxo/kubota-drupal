@@ -1,0 +1,24 @@
+uuid: 4e1eef6f-baec-401f-9f04-cb1ad168fea4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_products
+    - node.type.product
+    - paragraphs.paragraphs_type.editorial_products
+id: paragraph.editorial_products.field_products
+field_name: field_products
+entity_type: paragraph
+bundle: editorial_products
+label: Products
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      product: product
+field_type: entity_reference

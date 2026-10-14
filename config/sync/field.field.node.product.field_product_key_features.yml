@@ -1,0 +1,19 @@
+uuid: c8c5c55f-e770-4aab-bb1f-85fc4a4cb310
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_product_key_features
+    - node.type.product
+id: node.product.field_product_key_features
+field_name: field_product_key_features
+entity_type: node
+bundle: product
+label: 'Key features'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

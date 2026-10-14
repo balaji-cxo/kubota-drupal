@@ -1,0 +1,22 @@
+uuid: a6c9e0b1-2100-4085-b1ca-729626ea26a2
+langcode: en
+status: false
+dependencies:
+  module:
+    - help
+  theme:
+    - terra_gear
+_core:
+  default_config_hash: VfPFqqxfkomud5CO8DUijw85QIl9GIxh_nIxLOYESxg
+id: terra_gear_help
+theme: terra_gear
+region: primary_menu
+weight: 0
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Help
+  label_display: '0'
+  provider: help
+visibility: {  }

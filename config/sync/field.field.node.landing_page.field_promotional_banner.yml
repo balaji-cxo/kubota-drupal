@@ -1,0 +1,27 @@
+uuid: b361b291-ddc7-455a-9472-417c3ed72a68
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.banner
+    - field.storage.node.field_promotional_banner
+    - node.type.landing_page
+id: node.landing_page.field_promotional_banner
+field_name: field_promotional_banner
+entity_type: node
+bundle: landing_page
+label: 'Promotional banner'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:block_content'
+  handler_settings:
+    target_bundles:
+      banner: banner
+    sort:
+      field: _none
+    auto_create: false
+field_type: entity_reference

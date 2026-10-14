@@ -1,0 +1,7 @@
+<section{{ attributes.addClass('section', 'section--tint') }}>
+  <div class="container">
+    <div class="section-heading"><div><span class="eyebrow eyebrow--dark">ENGINEERED TO PERFORM</span><h2>{{ paragraph.field_heading.value ?: 'Featured Products' }}</h2></div><a href="{{ path('kubota_catalog.catalog') }}">Explore all products →</a></div>
+    <div class="product-grid">{% for product in editorial_products %}{{ include('terra_gear:product-card', {product: product, variant: 'featured'}) }}{% endfor %}</div>
+  </div>
+  {{ content.frontend_editing }}
+</section>

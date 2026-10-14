@@ -1,0 +1,27 @@
+uuid: c261e0d9-68de-4585-b1f5-792d27e06bce
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.banner
+    - field.storage.node.field_hero_banner
+    - node.type.landing_page
+id: node.landing_page.field_hero_banner
+field_name: field_hero_banner
+entity_type: node
+bundle: landing_page
+label: 'Hero banner'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:block_content'
+  handler_settings:
+    target_bundles:
+      banner: banner
+    sort:
+      field: _none
+    auto_create: false
+field_type: entity_reference

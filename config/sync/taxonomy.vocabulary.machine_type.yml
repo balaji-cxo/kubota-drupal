@@ -1,0 +1,9 @@
+uuid: 4fe38ee1-6c6c-4f56-8554-a42df9c6614d
+langcode: en
+status: true
+dependencies: {  }
+name: 'Machine Type'
+vid: machine_type
+description: 'Machine types and Product applications.'
+weight: 0
+new_revision: false

@@ -1,0 +1,23 @@
+uuid: 03ab00fe-bd7d-43bc-bd0b-34b9095c80ea
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_dealer_longitude
+    - node.type.dealer
+id: node.dealer.field_dealer_longitude
+field_name: field_dealer_longitude
+entity_type: node
+bundle: dealer
+label: Longitude
+description: 'Decimal degrees, from -180 to 180.'
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: -180.0
+  max: 180.0
+  prefix: ''
+  suffix: ''
+field_type: decimal

@@ -1,0 +1,21 @@
+uuid: 4d7834a4-fae3-4623-b545-d19d389b7c88
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_content
+id: block_content.field_benefit_1_text
+field_name: field_benefit_1_text
+entity_type: block_content
+type: string
+settings:
+  max_length: 255
+  case_sensitive: false
+  is_ascii: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

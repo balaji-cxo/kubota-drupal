@@ -1,0 +1,49 @@
+uuid: f20884dd-a010-4d50-86d4-c225870689bb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.machine_model.field_machine_make
+    - field.field.taxonomy_term.machine_model.field_machine_model_code
+    - field.field.taxonomy_term.machine_model.field_machine_type
+    - taxonomy.vocabulary.machine_model
+  module:
+    - text
+id: taxonomy_term.machine_model.default
+targetEntityType: taxonomy_term
+bundle: machine_model
+mode: default
+content:
+  description:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_machine_make:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_machine_model_code:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+      link_rel: canonical
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_machine_type:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 3
+    region: content
+hidden: {  }

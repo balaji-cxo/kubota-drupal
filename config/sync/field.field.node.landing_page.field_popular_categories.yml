@@ -1,0 +1,27 @@
+uuid: 9184a197-f6e3-4f83-843a-4a849b14bed7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_popular_categories
+    - node.type.landing_page
+    - taxonomy.vocabulary.product_category
+id: node.landing_page.field_popular_categories
+field_name: field_popular_categories
+entity_type: node
+bundle: landing_page
+label: 'Popular Categories'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      product_category: product_category
+    sort:
+      field: _none
+    auto_create: false
+field_type: entity_reference

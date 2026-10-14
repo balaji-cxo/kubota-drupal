@@ -1,0 +1,20 @@
+uuid: e31f8621-1197-4847-9cc8-01d577473ffa
+langcode: en
+status: false
+dependencies:
+  theme:
+    - terra_gear
+_core:
+  default_config_hash: 6aOgWsNTXjqrDm98TXSAjP6qd2nCijD1xw45MrnbK-Y
+id: terra_gear_page_title
+theme: terra_gear
+region: primary_menu
+weight: -5
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  label_display: '0'
+  provider: core
+visibility: {  }

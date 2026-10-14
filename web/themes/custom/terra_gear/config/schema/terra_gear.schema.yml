@@ -1,0 +1,7 @@
+terra_gear.settings:
+  type: theme_settings
+  label: 'TerraGear theme settings'
+  mapping:
+    color_scheme:
+      type: string
+      label: 'Color scheme'

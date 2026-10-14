@@ -1,0 +1,83 @@
+<?php
+
+/**
+ * @file
+ * Theme presentation hooks.
+ */
+
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\kubota_catalog\CatalogData;
+use Drupal\node\NodeInterface;
+
+/**
+ * Implements hook_form_system_theme_settings_alter().
+ */
+function terra_gear_form_system_theme_settings_alter(array &$form, FormStateInterface $form_state): void {
+  $form['terra_gear'] = [
+    '#type' => 'details',
+    '#title' => t('TerraGear appearance'),
+    '#open' => TRUE,
+  ];
+  $form['terra_gear']['color_scheme'] = [
+    '#type' => 'select',
+    '#title' => t('Color scheme'),
+    '#options' => [
+      'industrial' => t('Industrial gray and orange'),
+      'blueprint' => t('Blueprint blue and white'),
+    ],
+    '#default_value' => theme_get_setting('color_scheme') ?: 'industrial',
+  ];
+}
+
+/**
+ * Implements hook_preprocess_html().
+ */
+function terra_gear_preprocess_html(array &$variables): void {
+  $scheme = theme_get_setting('color_scheme') ?: 'industrial';
+  $variables['attributes']['class'][] = $scheme === 'blueprint' ? 'theme-blueprint' : 'theme-industrial';
+}
+
+/**
+ * Implements hook_preprocess_page().
+ */
+function terra_gear_preprocess_page(array &$variables): void {
+  $variables['is_front'] = \Drupal::service('path.matcher')->isFrontPage();
+}
+
+/**
+ * Provides curated Product cards without copying product data into paragraphs.
+ */
+function terra_gear_preprocess_paragraph(array &$variables): void {
+  $paragraph = $variables['paragraph'] ?? NULL;
+  if (!$paragraph) {
+    return;
+  }
+  if (in_array($paragraph->bundle(), ['editorial_products', 'product_grid'], TRUE)) {
+    $variables['editorial_products'] = [];
+    foreach ($paragraph->get('field_products')->referencedEntities() as $node) {
+      if ($node instanceof NodeInterface && $node->isPublished()) {
+        $variables['editorial_products'][] = CatalogData::product($node);
+      }
+    }
+  }
+  elseif ($paragraph->bundle() === 'category_grid') {
+    $variables['editorial_categories'] = [];
+    foreach ($paragraph->get('field_categories')->referencedEntities() as $term) {
+      $variables['editorial_categories'][] = CatalogData::category($term);
+    }
+  }
+  elseif ($paragraph->bundle() === 'promo_banner') {
+    $variables['editorial_banner'] = CatalogData::banner($paragraph->get('field_banner')->entity);
+  }
+  elseif ($paragraph->bundle() === 'testimonial_slider') {
+    $variables['editorial_testimonials'] = [];
+    foreach ($paragraph->get('field_testimonials')->referencedEntities() as $block) {
+      $variables['editorial_testimonials'][] = [
+        'quote' => CatalogData::value($block, 'field_testimonial_quote'),
+        'person' => CatalogData::value($block, 'field_testimonial_person'),
+        'role' => CatalogData::value($block, 'field_testimonial_role'),
+        'company' => CatalogData::value($block, 'field_testimonial_company'),
+      ];
+    }
+  }
+}

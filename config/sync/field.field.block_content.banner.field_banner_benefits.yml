@@ -1,0 +1,27 @@
+uuid: 2928b3f3-61ef-4adb-b103-c2142dced620
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.banner
+    - block_content.type.benefits_strip
+    - field.storage.block_content.field_banner_benefits
+id: block_content.banner.field_banner_benefits
+field_name: field_banner_benefits
+entity_type: block_content
+bundle: banner
+label: 'Banner benefits'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:block_content'
+  handler_settings:
+    target_bundles:
+      benefits_strip: benefits_strip
+    sort:
+      field: _none
+    auto_create: false
+field_type: entity_reference

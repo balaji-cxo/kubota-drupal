@@ -1,0 +1,27 @@
+uuid: 2f296b55-2c3f-4efe-82ae-f4b8c35a4a17
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.testimonial
+    - field.storage.node.field_testimonials
+    - node.type.landing_page
+id: node.landing_page.field_testimonials
+field_name: field_testimonials
+entity_type: node
+bundle: landing_page
+label: Testimonials
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:block_content'
+  handler_settings:
+    target_bundles:
+      testimonial: testimonial
+    sort:
+      field: _none
+    auto_create: false
+field_type: entity_reference

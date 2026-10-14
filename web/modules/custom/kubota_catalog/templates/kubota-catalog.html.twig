@@ -1,0 +1,43 @@
+<div class="catalog-page">
+  <section class="catalog-hero" {% if page_data.hero_image %}style="--hero-image: url('{{ page_data.hero_image }}')"{% endif %}>
+    <div class="container"><span class="eyebrow">PARTS BUILT FOR THE LONG HAUL</span><h1>{{ (page_data.active_category ? page_data.title : page_data.hero_heading)|upper }}</h1><p>{{ page_data.active_category ? page_data.description : page_data.hero_text }}</p></div>
+  </section>
+  <div class="container finder-overlap">
+    <div class="finder-card"><h2>Find Parts for Your Machine</h2>{{ include('terra_gear:machine-finder', {machines: page_data.machines, action: path('kubota_catalog.catalog'), compact: true}) }}</div>
+  </div>
+  {{ include('terra_gear:benefits-strip') }}
+  <div class="container catalog-content">
+    <nav class="breadcrumbs" aria-label="Breadcrumb"><a href="{{ path('<front>') }}">Home</a><span>›</span><a href="{{ path('kubota_catalog.catalog') }}">All Products</a>{% if page_data.active_category %}<span>›</span><span>{{ page_data.title }}</span>{% endif %}</nav>
+    <div class="catalog-layout">
+      <aside class="filter-panel">
+        <div class="filter-panel__header"><h2>Filters</h2><a href="{{ path('kubota_catalog.catalog') }}">Clear All</a></div>
+        <form action="{{ path('kubota_catalog.catalog') }}" method="get">
+          <details open><summary>Category</summary><label class="filter-choice"><input type="radio" name="category" value=""{{ not page_data.active_category ? ' checked' : '' }}> All Products</label>{% for category in page_data.categories %}<label class="filter-choice"><input type="radio" name="category" value="{{ category.id }}"{{ page_data.active_category == category.id ? ' checked' : '' }}> {{ category.title }}</label>{% endfor %}</details>
+          <details open><summary>Track Specifications</summary>
+            <label>Width (mm)<div class="range-pair"><input name="width_min" type="number" min="0" placeholder="Min" value="{{ page_data.filters.width_min|default('') }}"><input name="width_max" type="number" min="0" placeholder="Max" value="{{ page_data.filters.width_max|default('') }}"></div><input type="range" min="0" max="800" step="10" value="{{ page_data.filters.width_min|default(0) }}" data-range-for="width_min" aria-label="Minimum width slider"></label>
+            <label>Pitch (mm)<div class="range-pair"><input name="pitch_min" type="number" min="0" placeholder="Min" value="{{ page_data.filters.pitch_min|default('') }}"><input name="pitch_max" type="number" min="0" placeholder="Max" value="{{ page_data.filters.pitch_max|default('') }}"></div><input type="range" min="0" max="120" step="1" value="{{ page_data.filters.pitch_min|default(0) }}" data-range-for="pitch_min" aria-label="Minimum pitch slider"></label>
+            <label>Links<div class="range-pair"><input name="links_min" type="number" min="0" placeholder="Min" value="{{ page_data.filters.links_min|default('') }}"><input name="links_max" type="number" min="0" placeholder="Max" value="{{ page_data.filters.links_max|default('') }}"></div><input type="range" min="0" max="120" step="1" value="{{ page_data.filters.links_min|default(0) }}" data-range-for="links_min" aria-label="Minimum links slider"></label>
+          </details>
+          <details><summary>Machine Compatibility</summary>
+            <label>Make<select name="make"><option value="">All Makes</option>{% for item in page_data.machines.makes %}<option value="{{ item.id }}"{{ page_data.filters.make|default('') == item.id ? ' selected' : '' }}>{{ item.label }}</option>{% endfor %}</select></label>
+            <label>Machine Type<select name="type"><option value="">All Types</option>{% for item in page_data.machines.types %}<option value="{{ item.id }}"{{ page_data.filters.type|default('') == item.id ? ' selected' : '' }}>{{ item.label }}</option>{% endfor %}</select></label>
+            <label>Model<select name="model"><option value="">All Models</option>{% for item in page_data.machines.models %}<option value="{{ item.id }}"{{ page_data.filters.model|default('') == item.id ? ' selected' : '' }}>{{ item.label }}</option>{% endfor %}</select></label>
+          </details>
+          <details><summary>Application</summary><label>Machine Type<select name="application"><option value="">All Applications</option>{% for item in page_data.applications %}<option value="{{ item.id }}"{{ page_data.filters.application|default('') == item.id ? ' selected' : '' }}>{{ item.label }}</option>{% endfor %}</select></label></details>
+          <details><summary>Brand</summary><label>Brand<select name="brand"><option value="">All Brands</option>{% for item in page_data.brands %}<option value="{{ item.id }}"{{ page_data.filters.brand|default('') == item.id ? ' selected' : '' }}>{{ item.label }}</option>{% endfor %}</select></label></details>
+          <button class="button button--accent filter-apply" type="submit">Apply Filters</button>
+        </form>
+      </aside>
+      <section class="catalog-results">
+        <div class="results-heading"><div><h2>{{ page_data.title }} <span>({{ page_data.count }} results)</span></h2><p>Durable. Reliable. Built for any terrain.</p></div><div class="results-art" aria-hidden="true"></div></div>
+        <div class="results-toolbar"><label>Sort by <select data-sort-select><option value="part">Part Number (A–Z)</option><option value="title">Name (A–Z)</option><option value="width_asc">Width: Low to High</option><option value="width_desc">Width: High to Low</option></select></label><div class="view-switch" role="group" aria-label="Display mode"><button class="is-active" type="button" data-view-mode="cards">▦ Card</button><button type="button" data-view-mode="table">▤ Table</button></div></div>
+        {% if page_data.products %}
+          <div class="product-grid catalog-product-grid" data-catalog-cards>{% for product in page_data.products %}{{ include('terra_gear:product-card', {product: product}) }}{% endfor %}</div>
+          <div class="table-wrap is-hidden" data-catalog-table><table class="catalog-table"><thead><tr><th>Compare</th><th>Product</th><th>Part No.</th><th>Width</th><th>Pitch</th><th>Links</th><th>Application</th><th></th></tr></thead><tbody>{% for product in page_data.products %}<tr><td><input type="checkbox" data-compare-product="{{ product.id }}" aria-label="Compare {{ product.part_number }}"></td><td><img src="{{ product.image }}" alt="" width="56"></td><td><strong>{{ product.part_number }}</strong></td><td>{{ product.width|number_format(0) }} mm</td><td>{{ product.pitch|number_format(0) }} mm</td><td>{{ product.links }}</td><td>{{ product.application }}</td><td><a class="outline-button" href="{{ product.url }}">View</a></td></tr>{% endfor %}</tbody></table></div>
+        {% else %}<div class="empty-state"><h3>No matching products</h3><p>Try a wider specification range or clear the filters.</p><a class="button button--accent" href="{{ path('kubota_catalog.catalog') }}">Clear Filters</a></div>{% endif %}
+      </section>
+    </div>
+  </div>
+  <div class="compare-tray is-hidden" data-compare-tray><div class="container"><div><strong>Compare Products</strong><span data-compare-summary></span></div><a class="button button--accent" href="{{ path('kubota_catalog.compare') }}" data-compare-link>Compare Now →</a></div></div>
+  {% if page_data.editorial_sections %}<section class="container editorial-zone">{% if page_data.edit_url %}<a class="editorial-edit" href="{{ page_data.edit_url }}">Edit and arrange sections</a>{% endif %}{{ page_data.editorial_sections }}</section>{% endif %}
+</div>

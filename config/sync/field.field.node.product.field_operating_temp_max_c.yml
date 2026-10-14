@@ -1,0 +1,23 @@
+uuid: 1347a6af-28f4-4bce-a3ff-c20b238fc901
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_operating_temp_max_c
+    - node.type.product
+id: node.product.field_operating_temp_max_c
+field_name: field_operating_temp_max_c
+entity_type: node
+bundle: product
+label: 'Maximum operating temperature (°C)'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: decimal

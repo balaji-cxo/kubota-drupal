@@ -1,0 +1,21 @@
+uuid: b366a032-deda-4045-b980-b2070c344e0b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_product_badge
+    - node.type.product
+  module:
+    - options
+id: node.product.field_product_badge
+field_name: field_product_badge
+entity_type: node
+bundle: product
+label: Badge
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

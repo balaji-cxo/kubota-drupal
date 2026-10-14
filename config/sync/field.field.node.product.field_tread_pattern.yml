@@ -1,0 +1,19 @@
+uuid: b58024df-a3ee-4958-844b-89068b53da83
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_tread_pattern
+    - node.type.product
+id: node.product.field_tread_pattern
+field_name: field_tread_pattern
+entity_type: node
+bundle: product
+label: 'Tread pattern'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,37 @@
+uuid: bc4a9a77-37a7-4777-a429-9bc76a457fdc
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.product_category.field_category_card_subtitle
+    - field.field.taxonomy_term.product_category.field_category_image
+    - taxonomy.vocabulary.product_category
+  module:
+    - image
+    - text
+id: taxonomy_term.product_category.default
+targetEntityType: taxonomy_term
+bundle: product_category
+mode: default
+content:
+  description:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_category_image:
+    type: image
+    label: above
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  field_category_card_subtitle: true
+  search_api_excerpt: true

@@ -1,0 +1,19 @@
+uuid: ba687337-d2b4-4f6c-825a-37c56707b158
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_machine_model_code
+    - taxonomy.vocabulary.machine_model
+id: taxonomy_term.machine_model.field_machine_model_code
+field_name: field_machine_model_code
+entity_type: taxonomy_term
+bundle: machine_model
+label: 'Model code'
+description: 'The value shown in the Model selector, for example 259D.'
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

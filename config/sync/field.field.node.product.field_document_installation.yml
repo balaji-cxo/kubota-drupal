@@ -1,0 +1,27 @@
+uuid: 5435e92a-f0e7-4872-aebb-5da37f893f2c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_document_installation
+    - node.type.product
+  module:
+    - file
+id: node.product.field_document_installation
+field_name: field_document_installation
+entity_type: node
+bundle: product
+label: 'Installation guide (PDF)'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings: {  }
+  file_directory: products/documents
+  file_extensions: pdf
+  max_filesize: ''
+  description_field: false
+field_type: file

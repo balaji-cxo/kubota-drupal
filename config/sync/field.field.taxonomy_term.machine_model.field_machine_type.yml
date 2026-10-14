@@ -1,0 +1,27 @@
+uuid: 7a6b0b78-df0b-4af8-96c6-bc3e3be64b65
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_machine_type
+    - taxonomy.vocabulary.machine_model
+    - taxonomy.vocabulary.machine_type
+id: taxonomy_term.machine_model.field_machine_type
+field_name: field_machine_type
+entity_type: taxonomy_term
+bundle: machine_model
+label: 'Machine type'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      machine_type: machine_type
+    sort:
+      field: _none
+    auto_create: false
+field_type: entity_reference

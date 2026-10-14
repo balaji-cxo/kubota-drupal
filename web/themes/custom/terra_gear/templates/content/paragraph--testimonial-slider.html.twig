@@ -1,0 +1,10 @@
+<section{{ attributes.addClass('section', 'container', 'testimonial-section') }}>
+  <div class="section-heading"><div><span class="eyebrow eyebrow--dark">PROVEN IN THE FIELD</span><h2>{{ paragraph.field_heading.value ?: 'Trusted by Professionals' }}</h2></div></div>
+  <div class="testimonial-slider" data-testimonial-slider>
+    {% for quote in editorial_testimonials %}
+    <figure class="testimonial{{ not loop.first ? ' is-hidden' : '' }}"><blockquote>“{{ quote.quote }}”</blockquote><figcaption><strong>{{ quote.person }}</strong><span>{{ quote.role }}{% if quote.company %} · {{ quote.company }}{% endif %}</span></figcaption></figure>
+    {% endfor %}
+    <div class="slider-actions"><button type="button" data-slide-prev aria-label="Previous testimonial">‹</button><button type="button" data-slide-next aria-label="Next testimonial">›</button></div>
+  </div>
+  {{ content.frontend_editing }}
+</section>

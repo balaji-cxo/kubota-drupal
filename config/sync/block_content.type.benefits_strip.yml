@@ -1,0 +1,8 @@
+uuid: 926fde77-0bb2-4e24-85f5-7eca2c421010
+langcode: en
+status: true
+dependencies: {  }
+id: benefits_strip
+label: 'Benefits Strip'
+revision: true
+description: 'Four icon, heading and description benefits.'

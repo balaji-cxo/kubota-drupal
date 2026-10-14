@@ -1,0 +1,19 @@
+uuid: 27437047-53d3-406e-8f4b-6f7a364f5c10
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.benefits_strip
+    - field.storage.block_content.field_benefit_2_heading
+id: block_content.benefits_strip.field_benefit_2_heading
+field_name: field_benefit_2_heading
+entity_type: block_content
+bundle: benefits_strip
+label: 'Benefit 2 heading'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

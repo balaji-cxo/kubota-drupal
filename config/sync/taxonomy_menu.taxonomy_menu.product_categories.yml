@@ -1,0 +1,16 @@
+uuid: 5836a188-7639-4259-a7f7-85e34d6a8c75
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.main
+    - taxonomy.vocabulary.product_category
+id: product_categories
+label: 'Product Categories'
+vocabulary: product_category
+menu: main
+expanded: true
+depth: 2
+menu_parent: 'main:'
+description_field_name: ''
+use_term_weight_order: true

@@ -1,0 +1,295 @@
+uuid: de08a719-0d66-4442-aa2f-29c03942e98e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.product.field_compatible_machines
+    - field.field.node.product.field_document_cad
+    - field.field.node.product.field_document_datasheet
+    - field.field.node.product.field_document_installation
+    - field.field.node.product.field_document_manual
+    - field.field.node.product.field_editorial_sections
+    - field.field.node.product.field_links
+    - field.field.node.product.field_material
+    - field.field.node.product.field_oem_cross_references
+    - field.field.node.product.field_operating_temp_max_c
+    - field.field.node.product.field_operating_temp_min_c
+    - field.field.node.product.field_part_number
+    - field.field.node.product.field_pitch_mm
+    - field.field.node.product.field_primary_application
+    - field.field.node.product.field_product_badge
+    - field.field.node.product.field_product_brand
+    - field.field.node.product.field_product_category
+    - field.field.node.product.field_product_description
+    - field.field.node.product.field_product_gallery
+    - field.field.node.product.field_product_image
+    - field.field.node.product.field_product_key_features
+    - field.field.node.product.field_product_promo_banner
+    - field.field.node.product.field_product_reviews
+    - field.field.node.product.field_product_short_description
+    - field.field.node.product.field_related_products
+    - field.field.node.product.field_tread_pattern
+    - field.field.node.product.field_weight_kg
+    - field.field.node.product.field_width_mm
+    - node.type.product
+  module:
+    - file
+    - image
+    - layout_paragraphs
+    - options
+    - text
+    - user
+id: node.product.default
+targetEntityType: node
+bundle: product
+mode: default
+content:
+  field_compatible_machines:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 119
+    region: content
+  field_document_cad:
+    type: file_default
+    label: above
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
+    weight: 121
+    region: content
+  field_document_datasheet:
+    type: file_default
+    label: above
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
+    weight: 120
+    region: content
+  field_document_installation:
+    type: file_default
+    label: above
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
+    weight: 123
+    region: content
+  field_document_manual:
+    type: file_default
+    label: above
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
+    weight: 122
+    region: content
+  field_editorial_sections:
+    type: layout_paragraphs
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 80
+    region: content
+  field_links:
+    type: number_integer
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 112
+    region: content
+  field_material:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+      link_rel: canonical
+    third_party_settings: {  }
+    weight: 115
+    region: content
+  field_oem_cross_references:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+      link_rel: canonical
+    third_party_settings: {  }
+    weight: 124
+    region: content
+  field_operating_temp_max_c:
+    type: number_decimal
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 117
+    region: content
+  field_operating_temp_min_c:
+    type: number_decimal
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 116
+    region: content
+  field_part_number:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+      link_rel: canonical
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  field_pitch_mm:
+    type: number_decimal
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 111
+    region: content
+  field_primary_application:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 118
+    region: content
+  field_product_badge:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 106
+    region: content
+  field_product_brand:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 103
+    region: content
+  field_product_category:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 102
+    region: content
+  field_product_description:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 108
+    region: content
+  field_product_gallery:
+    type: image
+    label: above
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 107
+    region: content
+  field_product_image:
+    type: image
+    label: above
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 104
+    region: content
+  field_product_key_features:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+      link_rel: canonical
+    third_party_settings: {  }
+    weight: 109
+    region: content
+  field_product_promo_banner:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 125
+    region: content
+  field_product_short_description:
+    type: basic_string
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 105
+    region: content
+  field_related_products:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 126
+    region: content
+  field_tread_pattern:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+      link_rel: canonical
+    third_party_settings: {  }
+    weight: 114
+    region: content
+  field_weight_kg:
+    type: number_decimal
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 113
+    region: content
+  field_width_mm:
+    type: number_decimal
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 110
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_product_reviews: true
+  search_api_excerpt: true

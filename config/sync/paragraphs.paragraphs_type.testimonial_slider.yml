@@ -1,0 +1,10 @@
+uuid: c9ea7741-4c01-428e-abba-7e51c2b5b223
+langcode: en
+status: true
+dependencies: {  }
+id: testimonial_slider
+label: 'Testimonial Slider'
+icon_uuid: null
+icon_default: null
+description: null
+behavior_plugins: {  }

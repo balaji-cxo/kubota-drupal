@@ -1,0 +1,28 @@
+<article class="product-card{{ compact ? ' product-card--compact' : '' }}{{ variant == 'featured' ? ' product-card--featured' : '' }}" data-product-id="{{ product.id }}">
+  {% if product.badge %}<span class="product-badge">{{ product.badge == 'best_seller' ? 'Best Seller' : product.badge|replace({'_': ' '})|title }}</span>{% endif %}
+  <a class="product-card__image" href="{{ product.url }}">
+    {% if product.image %}<img src="{{ product.image }}" alt="{{ product.image_alt }}" loading="lazy">{% endif %}
+  </a>
+  <div class="product-card__body">
+    <a class="product-card__title" href="{{ product.url }}">{{ product.part_number ?: product.title }}</a>
+    <p class="product-card__category">{{ product.category }}</p>
+    {% if variant == 'featured' %}
+      <ul class="featured-specs">
+        {% if product.width %}<li>{{ product.width|number_format(0) }} mm Width</li>{% endif %}
+        {% if product.pitch %}<li>{{ product.pitch|number_format(0) }} mm Pitch</li>{% endif %}
+        {% if product.links %}<li>{{ product.links }} Links</li>{% endif %}
+        {% if not product.width %}{% for feature in product.features|slice(0, 3) %}<li>{{ feature }}</li>{% endfor %}{% endif %}
+      </ul>
+    {% else %}
+      <dl class="mini-specs">
+        {% if product.width %}<div><dt>Width</dt><dd>{{ product.width|number_format(0) }} mm</dd></div>{% endif %}
+        {% if product.pitch %}<div><dt>Pitch</dt><dd>{{ product.pitch|number_format(0) }} mm</dd></div>{% endif %}
+        {% if product.links %}<div><dt>Links</dt><dd>{{ product.links }}</dd></div>{% endif %}
+      </dl>
+    {% endif %}
+    <div class="product-card__actions">
+      {% if variant != 'featured' and not compact %}<label class="compare-check"><input type="checkbox" data-compare-product="{{ product.id }}"> Compare</label>{% endif %}
+      <a class="outline-button" href="{{ product.url }}">View Details {{ include('terra_gear:icon', {name: 'arrow-right'}) }}</a>
+    </div>
+  </div>
+</article>

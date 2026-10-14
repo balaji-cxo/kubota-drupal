@@ -1,0 +1,23 @@
+uuid: 008fc0c0-4752-4b9d-b704-6a44ceca7f45
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_width_mm
+    - node.type.product
+id: node.product.field_width_mm
+field_name: field_width_mm
+entity_type: node
+bundle: product
+label: 'Width (mm)'
+description: 'Rubber track specification. Store millimetres as a number for PLP range filters.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: 0.0
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: decimal

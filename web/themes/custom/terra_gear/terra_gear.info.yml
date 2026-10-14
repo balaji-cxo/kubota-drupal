@@ -1,0 +1,11 @@
+name: TerraGear Industrial
+type: theme
+description: Industrial catalogue theme for the TerraGear proof of concept.
+core_version_requirement: ^11
+base theme: false
+libraries:
+  - terra_gear/global
+regions:
+  primary_menu: 'Primary menu'
+  content: Content
+  footer: Footer

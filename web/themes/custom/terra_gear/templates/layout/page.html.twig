@@ -1,0 +1,40 @@
+<a class="skip-link" href="#main-content">{{ 'Skip to main content'|t }}</a>
+<div class="site-shell">
+  <header class="site-header">
+    <div class="header-main container">
+      <a class="brand" href="{{ path('<front>') }}" aria-label="TerraGear home"><span>Terra</span>Gear</a>
+      <form class="header-search" action="{{ path('kubota_catalog.catalog') }}" method="get" role="search">
+        <label class="visually-hidden" for="site-search">{{ 'Search products or part numbers'|t }}</label>
+        {{ include('terra_gear:icon', {name: 'search'}) }}
+        <input id="site-search" name="q" type="search" placeholder="Search parts, part numbers, or ask a question...">
+        <button type="submit" aria-label="{{ 'Search'|t }}">{{ include('terra_gear:icon', {name: 'search'}) }}</button>
+      </form>
+      <div class="header-actions">
+        <a href="{{ path('kubota_catalog.compare') }}" class="header-action">{{ include('terra_gear:icon', {name: 'compare'}) }}<span>Compare <small data-compare-count>0</small></span></a>
+        <a href="{{ path('kubota_catalog.dealers') }}" class="header-action">{{ include('terra_gear:icon', {name: 'pin'}) }}<span>Find a Dealer</span></a>
+        <a href="#site-footer" class="header-action">{{ include('terra_gear:icon', {name: 'headset'}) }}<span>Support</span></a>
+      </div>
+    </div>
+    <div class="nav-bar">
+      <div class="container nav-inner">
+        {{ page.primary_menu }}
+      </div>
+    </div>
+  </header>
+  <main id="main-content">
+    {{ page.content }}
+  </main>
+  <footer class="site-footer" id="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="{{ path('<front>') }}"><span>Terra</span>Gear</a>
+        <p>BUILT TO KEEP YOU MOVING</p>
+      </div>
+      <div><h2>Shop</h2><a href="{{ path('kubota_catalog.catalog') }}">All Products</a><a href="{{ path('kubota_catalog.catalog') }}">Product Categories</a></div>
+      <div><h2>Support</h2><a href="{{ path('kubota_catalog.dealers') }}">Find a Dealer</a><a href="mailto:support@terragear.example">Contact Us</a></div>
+      <div><h2>Company</h2><a href="{{ path('<front>') }}">About Us</a><a href="{{ path('kubota_catalog.dealers') }}">Dealer Network</a></div>
+      <div class="footer-social" aria-label="Social channels"><span>in</span><span>▶</span><span>◎</span></div>
+    </div>
+    {{ page.footer }}
+  </footer>
+</div>

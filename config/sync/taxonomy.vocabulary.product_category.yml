@@ -1,0 +1,9 @@
+uuid: 1ef73369-9cb2-43ab-8ffd-9dd25f91be7e
+langcode: en
+status: true
+dependencies: {  }
+name: 'Product Category'
+vid: product_category
+description: 'Categories used by Products and the Popular Categories cards.'
+weight: 0
+new_revision: false

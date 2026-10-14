@@ -1,0 +1,9 @@
+name: TerraGear icon
+status: stable
+props:
+  type: object
+  required:
+    - name
+  properties:
+    name:
+      type: string

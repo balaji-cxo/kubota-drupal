@@ -1,0 +1,5 @@
+<section{{ attributes.addClass('editorial-products') }}>
+  <h2>{{ paragraph.field_heading.value }}</h2>
+  <div class="product-grid">{% for product in editorial_products %}{{ include('terra_gear:product-card', {product: product}) }}{% endfor %}</div>
+  {{ content.frontend_editing }}
+</section>

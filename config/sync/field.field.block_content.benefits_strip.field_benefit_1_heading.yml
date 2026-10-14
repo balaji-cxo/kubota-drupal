@@ -1,0 +1,19 @@
+uuid: f8870274-fd3d-4ea4-b506-26b255aada67
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.benefits_strip
+    - field.storage.block_content.field_benefit_1_heading
+id: block_content.benefits_strip.field_benefit_1_heading
+field_name: field_benefit_1_heading
+entity_type: block_content
+bundle: benefits_strip
+label: 'Benefit 1 heading'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,20 @@
+uuid: fe874d1b-9104-4a09-9e85-0ed96676be59
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_operating_temp_max_c
+field_name: field_operating_temp_max_c
+entity_type: node
+type: decimal
+settings:
+  precision: 6
+  scale: 2
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

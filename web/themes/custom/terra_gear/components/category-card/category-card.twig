@@ -1,0 +1,6 @@
+<a class="category-card" href="{{ category.url }}">
+  <span class="category-card__image">{% if category.image %}<img src="{{ category.image }}" alt="" loading="lazy">{% endif %}</span>
+  <span class="category-card__title">{{ category.title }}</span>
+  <span class="category-card__subtitle">{{ category.subtitle }}</span>
+  <span class="category-card__arrow">{{ include('terra_gear:icon', {name: 'arrow-right'}) }}</span>
+</a>

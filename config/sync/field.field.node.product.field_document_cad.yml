@@ -1,0 +1,27 @@
+uuid: e2e3da60-139d-401e-9c34-340ddf03b45a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_document_cad
+    - node.type.product
+  module:
+    - file
+id: node.product.field_document_cad
+field_name: field_document_cad
+entity_type: node
+bundle: product
+label: 'CAD drawing'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings: {  }
+  file_directory: products/documents
+  file_extensions: 'dwg dxf'
+  max_filesize: ''
+  description_field: false
+field_type: file

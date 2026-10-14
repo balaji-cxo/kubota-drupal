@@ -1,0 +1,19 @@
+uuid: ee920524-2f18-46b3-b615-2dbcad2fc63a
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.benefits_strip
+    - field.storage.block_content.field_benefit_3_heading
+id: block_content.benefits_strip.field_benefit_3_heading
+field_name: field_benefit_3_heading
+entity_type: block_content
+bundle: benefits_strip
+label: 'Benefit 3 heading'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

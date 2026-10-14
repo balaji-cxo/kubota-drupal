@@ -1,0 +1,19 @@
+uuid: 76afad93-af3d-4f55-8530-a7b1a0d891d0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_part_number
+    - node.type.product
+id: node.product.field_part_number
+field_name: field_part_number
+entity_type: node
+bundle: product
+label: 'Part number'
+description: 'Unique product identifier used by Search by Part Number.'
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

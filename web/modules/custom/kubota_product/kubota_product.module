@@ -1,0 +1,17 @@
+<?php
+
+/**
+ * @file
+ * Product field validation.
+ */
+
+use Drupal\Core\Entity\EntityTypeInterface;
+
+/**
+ * Implements hook_entity_bundle_field_info_alter().
+ */
+function kubota_product_entity_bundle_field_info_alter(array &$fields, EntityTypeInterface $entity_type, $bundle): void {
+  if ($entity_type->id() === 'node' && $bundle === 'product' && isset($fields['field_part_number'])) {
+    $fields['field_part_number']->addConstraint('UniqueField', ['caseSensitive' => FALSE]);
+  }
+}

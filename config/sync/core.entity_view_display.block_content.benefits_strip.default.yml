@@ -1,0 +1,142 @@
+uuid: b0de8222-b70e-4496-a428-4e0b2bc765fe
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.benefits_strip
+    - field.field.block_content.benefits_strip.field_benefit_1_heading
+    - field.field.block_content.benefits_strip.field_benefit_1_icon
+    - field.field.block_content.benefits_strip.field_benefit_1_text
+    - field.field.block_content.benefits_strip.field_benefit_2_heading
+    - field.field.block_content.benefits_strip.field_benefit_2_icon
+    - field.field.block_content.benefits_strip.field_benefit_2_text
+    - field.field.block_content.benefits_strip.field_benefit_3_heading
+    - field.field.block_content.benefits_strip.field_benefit_3_icon
+    - field.field.block_content.benefits_strip.field_benefit_3_text
+    - field.field.block_content.benefits_strip.field_benefit_4_heading
+    - field.field.block_content.benefits_strip.field_benefit_4_icon
+    - field.field.block_content.benefits_strip.field_benefit_4_text
+  module:
+    - image
+id: block_content.benefits_strip.default
+targetEntityType: block_content
+bundle: benefits_strip
+mode: default
+content:
+  field_benefit_1_heading:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+      link_rel: canonical
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_benefit_1_icon:
+    type: image
+    label: above
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_benefit_1_text:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+      link_rel: canonical
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_benefit_2_heading:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+      link_rel: canonical
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_benefit_2_icon:
+    type: image
+    label: above
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_benefit_2_text:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+      link_rel: canonical
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_benefit_3_heading:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+      link_rel: canonical
+    third_party_settings: {  }
+    weight: 7
+    region: content
+  field_benefit_3_icon:
+    type: image
+    label: above
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  field_benefit_3_text:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+      link_rel: canonical
+    third_party_settings: {  }
+    weight: 8
+    region: content
+  field_benefit_4_heading:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+      link_rel: canonical
+    third_party_settings: {  }
+    weight: 10
+    region: content
+  field_benefit_4_icon:
+    type: image
+    label: above
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 9
+    region: content
+  field_benefit_4_text:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+      link_rel: canonical
+    third_party_settings: {  }
+    weight: 11
+    region: content
+hidden: {  }

@@ -1,0 +1,19 @@
+uuid: 373af354-c550-416a-8375-075dea95457a
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.testimonial
+    - field.storage.block_content.field_testimonial_person
+id: block_content.testimonial.field_testimonial_person
+field_name: field_testimonial_person
+entity_type: block_content
+bundle: testimonial
+label: 'Person name'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

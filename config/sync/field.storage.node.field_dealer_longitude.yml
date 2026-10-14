@@ -1,0 +1,20 @@
+uuid: 9f4e328b-85ab-4e5f-98e0-1f5ae77850f1
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_dealer_longitude
+field_name: field_dealer_longitude
+entity_type: node
+type: decimal
+settings:
+  precision: 10
+  scale: 7
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,10 @@
+name: TerraGear Catalogue
+type: module
+description: Catalogue, product detail, and dealer finder presentation for the POC.
+package: Custom
+core_version_requirement: ^11
+dependencies:
+  - drupal:node
+  - drupal:taxonomy
+  - drupal:comment
+  - taxonomy_menu:taxonomy_menu

@@ -1,0 +1,22 @@
+uuid: 44c88693-7b6c-4799-8161-08a52ebefed8
+langcode: en
+status: false
+dependencies:
+  module:
+    - system
+  theme:
+    - terra_gear
+_core:
+  default_config_hash: VhBzWb7lMRtIOg9G7VSw_0uopi-7zXeHq4vXqqV1HFE
+id: terra_gear_breadcrumbs
+theme: terra_gear
+region: primary_menu
+weight: 0
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: Breadcrumbs
+  label_display: '0'
+  provider: system
+visibility: {  }

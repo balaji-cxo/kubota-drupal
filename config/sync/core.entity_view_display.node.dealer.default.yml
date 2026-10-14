@@ -1,0 +1,91 @@
+uuid: 6d29e154-9053-46c3-a6a6-f839de0c4d56
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.dealer.field_dealer_address_line_2
+    - field.field.node.dealer.field_dealer_city
+    - field.field.node.dealer.field_dealer_email
+    - field.field.node.dealer.field_dealer_latitude
+    - field.field.node.dealer.field_dealer_longitude
+    - field.field.node.dealer.field_dealer_phone
+    - field.field.node.dealer.field_dealer_photo
+    - field.field.node.dealer.field_dealer_state
+    - field.field.node.dealer.field_dealer_street_address
+    - field.field.node.dealer.field_dealer_zip_code
+    - field.field.node.dealer.field_editorial_sections
+    - node.type.dealer
+  module:
+    - layout_paragraphs
+    - user
+id: node.dealer.default
+targetEntityType: node
+bundle: dealer
+mode: default
+content:
+  field_dealer_address_line_2:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 103
+    region: content
+  field_dealer_city:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 104
+    region: content
+  field_dealer_email:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 108
+    region: content
+  field_dealer_latitude:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 109
+    region: content
+  field_dealer_longitude:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 110
+    region: content
+  field_dealer_phone:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 107
+    region: content
+  field_dealer_photo:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  field_dealer_state:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 105
+    region: content
+  field_dealer_street_address:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 102
+    region: content
+  field_dealer_zip_code:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 106
+    region: content
+  field_editorial_sections:
+    type: layout_paragraphs
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 80
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  search_api_excerpt: true

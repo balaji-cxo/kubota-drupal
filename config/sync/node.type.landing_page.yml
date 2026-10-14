@@ -1,0 +1,11 @@
+uuid: 6aaff7c5-c069-46d8-8876-d42a6743fdef
+langcode: en
+status: true
+dependencies: {  }
+name: 'Landing Page'
+type: landing_page
+description: 'Curated landing pages composed of reusable banners and Product selections.'
+help: null
+new_revision: true
+preview_mode: 0
+display_submitted: false

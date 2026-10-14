@@ -1,0 +1,11 @@
+uuid: 174a83e3-79e8-42c7-8db5-5b02cf4f9941
+langcode: en
+status: true
+dependencies: {  }
+name: Dealer
+type: dealer
+description: 'Dealer locations used by the Where to Buy finder.'
+help: null
+new_revision: true
+preview_mode: 0
+display_submitted: false

@@ -1,0 +1,14 @@
+uuid: 3d34dca8-6893-4257-842b-ef684427ff46
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.catalog_editor
+  module:
+    - user
+id: user_add_role_action.catalog_editor
+label: 'Add the Catalogue Editor role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: catalog_editor

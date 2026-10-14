@@ -1,0 +1,22 @@
+uuid: c28fd673-3c2e-41b6-8b05-5e8ab40f5178
+langcode: en
+status: false
+dependencies:
+  theme:
+    - terra_gear
+_core:
+  default_config_hash: ydSxdq7R66I8UMC460rOzlfzvlUL4VRbdwc6z9DWaUI
+id: terra_gear_secondary_local_tasks
+theme: terra_gear
+region: primary_menu
+weight: -2
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: 'Secondary tabs'
+  label_display: '0'
+  provider: core
+  primary: false
+  secondary: true
+visibility: {  }

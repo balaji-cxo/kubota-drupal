@@ -1,0 +1,27 @@
+uuid: b3ea9bcb-05e8-4f5a-b83f-49154cbfc6c8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_document_datasheet
+    - node.type.product
+  module:
+    - file
+id: node.product.field_document_datasheet
+field_name: field_document_datasheet
+entity_type: node
+bundle: product
+label: 'Datasheet (PDF)'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings: {  }
+  file_directory: products/documents
+  file_extensions: pdf
+  max_filesize: ''
+  description_field: false
+field_type: file

@@ -1,0 +1,22 @@
+uuid: ac15319e-863b-4a0a-87c8-fd5fbe3deda8
+langcode: en
+status: false
+dependencies:
+  theme:
+    - terra_gear
+_core:
+  default_config_hash: nGE3EoPQQaQCuqTUtZgw0-KIzmrqdKDzdNQf2JyPUt4
+id: terra_gear_primary_local_tasks
+theme: terra_gear
+region: primary_menu
+weight: -4
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: 'Primary tabs'
+  label_display: '0'
+  provider: core
+  primary: true
+  secondary: false
+visibility: {  }

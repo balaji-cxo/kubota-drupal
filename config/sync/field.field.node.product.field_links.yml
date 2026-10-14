@@ -1,0 +1,23 @@
+uuid: 281dd3ae-022d-4893-b3a5-568cb42ed120
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_links
+    - node.type.product
+id: node.product.field_links
+field_name: field_links
+entity_type: node
+bundle: product
+label: 'Number of links'
+description: 'Rubber track specification.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: 0
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

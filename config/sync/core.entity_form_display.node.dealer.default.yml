@@ -1,0 +1,140 @@
+uuid: b8328ed9-8c2a-4e84-a813-fed105d77749
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.dealer.field_dealer_address_line_2
+    - field.field.node.dealer.field_dealer_city
+    - field.field.node.dealer.field_dealer_email
+    - field.field.node.dealer.field_dealer_latitude
+    - field.field.node.dealer.field_dealer_longitude
+    - field.field.node.dealer.field_dealer_phone
+    - field.field.node.dealer.field_dealer_photo
+    - field.field.node.dealer.field_dealer_state
+    - field.field.node.dealer.field_dealer_street_address
+    - field.field.node.dealer.field_dealer_zip_code
+    - field.field.node.dealer.field_editorial_sections
+    - image.style.thumbnail
+    - node.type.dealer
+  module:
+    - image
+    - layout_paragraphs
+    - path
+    - telephone
+id: node.dealer.default
+targetEntityType: node
+bundle: dealer
+mode: default
+content:
+  created:
+    type: datetime_timestamp
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_dealer_address_line_2:
+    type: string_textfield
+    weight: 3
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_dealer_city:
+    type: string_textfield
+    weight: 4
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_dealer_email:
+    type: email_default
+    weight: 8
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_dealer_latitude:
+    type: number
+    weight: 9
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_dealer_longitude:
+    type: number
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_dealer_phone:
+    type: telephone_default
+    weight: 7
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_dealer_photo:
+    type: image_image
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_dealer_state:
+    type: string_textfield
+    weight: 5
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_dealer_street_address:
+    type: string_textfield
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_dealer_zip_code:
+    type: string_textfield
+    weight: 6
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_editorial_sections:
+    type: layout_paragraphs
+    weight: 80
+    region: content
+    settings:
+      view_mode: default
+      preview_view_mode: default
+      form_display_mode: default
+      nesting_depth: 0
+      require_layouts: 0
+      empty_message: ''
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 30
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    weight: 120
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 5
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  promote: true
+  sticky: true

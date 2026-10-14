@@ -1,0 +1,27 @@
+uuid: e522b8f8-dc2d-4090-a8b1-d86d8a717d99
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_document_manual
+    - node.type.product
+  module:
+    - file
+id: node.product.field_document_manual
+field_name: field_document_manual
+entity_type: node
+bundle: product
+label: 'Technical manual (PDF)'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings: {  }
+  file_directory: products/documents
+  file_extensions: pdf
+  max_filesize: ''
+  description_field: false
+field_type: file

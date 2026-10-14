@@ -1,0 +1,11 @@
+uuid: 257a2e00-b8c5-4105-81f2-4ba663cf3818
+langcode: en
+status: true
+dependencies: {  }
+name: Product
+type: product
+description: 'Parts displayed on homepage cards, product listings and product details.'
+help: null
+new_revision: true
+preview_mode: 0
+display_submitted: false

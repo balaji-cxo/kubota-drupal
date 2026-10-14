@@ -1,0 +1,13 @@
+name: Machine finder
+status: stable
+props:
+  type: object
+  properties:
+    machines:
+      type: object
+    action:
+      type: string
+    compact:
+      type: boolean
+    hero:
+      type: boolean

@@ -1,0 +1,15 @@
+global:
+  css:
+    theme:
+      css/terra-gear.css: {}
+  js:
+    js/terra-gear.js: {}
+  dependencies:
+    - core/drupal
+    - core/once
+dealer-map:
+  js:
+    js/dealer-map.js: {}
+  dependencies:
+    - core/drupal
+    - core/once

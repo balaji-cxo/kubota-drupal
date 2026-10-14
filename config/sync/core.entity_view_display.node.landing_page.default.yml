@@ -1,0 +1,89 @@
+uuid: df8ada18-e8b7-4496-8a30-f6ed026cebed
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.landing_page.field_benefits_strip
+    - field.field.node.landing_page.field_editorial_sections
+    - field.field.node.landing_page.field_featured_products
+    - field.field.node.landing_page.field_hero_banner
+    - field.field.node.landing_page.field_page_hero_heading
+    - field.field.node.landing_page.field_page_hero_text
+    - field.field.node.landing_page.field_popular_categories
+    - field.field.node.landing_page.field_promotional_banner
+    - field.field.node.landing_page.field_testimonials
+    - node.type.landing_page
+  module:
+    - layout_paragraphs
+    - user
+id: node.landing_page.default
+targetEntityType: node
+bundle: landing_page
+mode: default
+content:
+  field_benefits_strip:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 105
+    region: content
+  field_editorial_sections:
+    type: layout_paragraphs
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 80
+    region: content
+  field_featured_products:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 103
+    region: content
+  field_hero_banner:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  field_popular_categories:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 102
+    region: content
+  field_promotional_banner:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 104
+    region: content
+  field_testimonials:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 106
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_page_hero_heading: true
+  field_page_hero_text: true
+  search_api_excerpt: true

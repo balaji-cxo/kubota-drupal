@@ -1,0 +1,42 @@
+<div class="dealer-page">
+  <section class="dealer-hero" {% if page_data.hero_image %}style="--hero-image: url('{{ page_data.hero_image }}')"{% endif %}><div class="container"><span class="eyebrow">WHERE TO BUY</span><h1>{{ page_data.hero_heading|upper }}</h1><p>{{ page_data.hero_text }}</p></div></section>
+  <div class="container dealer-product-bar">
+    {% if page_data.product %}
+    <div class="selected-product"><img src="{{ page_data.product.image }}" alt=""><div><strong>{{ page_data.product.part_number }}</strong><span>{{ page_data.product.category }}</span><a href="{{ page_data.catalog_url }}">Change Product</a></div></div>
+    {% else %}<div class="selected-product selected-product--empty"><div><strong>Find your local dealer</strong><span>Search by location or select a product first.</span><a href="{{ page_data.catalog_url }}">Browse Products</a></div></div>{% endif %}
+    {{ include('terra_gear:machine-finder', {machines: page_data.machines, action: page_data.catalog_url, compact: true}) }}
+  </div>
+  <div class="container dealer-main">
+    <div class="dealer-search-row">
+      <form action="{{ path('kubota_catalog.dealers') }}" method="get" class="dealer-search">
+        {% if page_data.product %}<input type="hidden" name="product" value="{{ page_data.product.id }}">{% endif %}
+        <label>Search Location<input name="zip" value="{{ page_data.zip }}" placeholder="ZIP, city, or state"></label>
+        <label>Distance<select name="radius"><option value="25"{{ page_data.radius == 25 ? ' selected' : '' }}>25 Miles</option><option value="50"{{ page_data.radius == 50 ? ' selected' : '' }}>50 Miles</option><option value="100"{{ page_data.radius == 100 ? ' selected' : '' }}>100 Miles</option><option value="250"{{ page_data.radius == 250 ? ' selected' : '' }}>250 Miles</option></select></label>
+        <button type="submit" class="button button--accent">Search</button>
+      </form>
+      <div class="dealer-count"><strong>{{ page_data.count }} Dealers Found</strong><label>Sort by <select data-dealer-sort><option value="name"{{ page_data.sort == 'name' ? ' selected' : '' }}>Name</option><option value="distance"{{ page_data.sort == 'distance' ? ' selected' : '' }}>Distance</option></select></label></div>
+    </div>
+    <div class="dealer-split">
+      <section class="map-panel" aria-label="Dealer map">
+        <div class="map-controls"><button type="button" class="is-active" data-map-type="roadmap">Map</button><button type="button" data-map-type="satellite">Satellite</button></div>
+        <div id="dealer-map" data-google-key="{{ page_data.google_key }}" data-dealers="{{ page_data.dealers|json_encode|e('html_attr') }}">
+          {% if not page_data.google_key %}<div class="map-unconfigured"><span aria-hidden="true">◎</span><strong>Dealer map ready for Google Maps</strong><p>Add the API key to display the live road and satellite map. The dealer list and location search work now.</p></div>{% endif %}
+        </div>
+      </section>
+      <div class="dealer-list">
+        {% for dealer in page_data.dealers %}
+        <article class="dealer-card" data-dealer-id="{{ dealer.id }}">
+          <img src="{{ dealer.image }}" alt="{{ dealer.title }} storefront" loading="lazy">
+          <div class="dealer-card__content"><div class="dealer-card__head"><h2>{{ dealer.title }}</h2>{% if dealer.distance is defined %}<strong>{{ dealer.distance }} mi</strong>{% endif %}</div>
+            <p>{{ dealer.street }}<br>{{ dealer.city }}, {{ dealer.state }} {{ dealer.zip }}</p>
+            <div class="dealer-card__actions"><a href="tel:{{ dealer.phone|replace({' ': ''}) }}">☎ Call</a><a href="mailto:{{ dealer.email }}">✉ Email</a><a href="https://www.google.com/maps/dir/?api=1&destination={{ (dealer.street ~ ', ' ~ dealer.city ~ ', ' ~ dealer.state ~ ' ' ~ dealer.zip)|url_encode }}" target="_blank" rel="noopener">⌖ Directions</a></div>
+          </div>
+        </article>
+        {% else %}<div class="empty-state"><h2>No dealers found</h2><p>Try another location or a larger radius.</p></div>{% endfor %}
+        <div class="dealer-help"><div aria-hidden="true">♧</div><div><h2>NEED HELP FINDING A DEALER?</h2><p>Our team can connect you with the right dealer in your area.</p></div><a class="outline-button" href="mailto:support@terragear.example">Contact Support</a></div>
+      </div>
+    </div>
+  </div>
+  {{ include('terra_gear:benefits-strip') }}
+  {% if page_data.editorial_sections %}<section class="container editorial-zone">{% if page_data.edit_url %}<a class="editorial-edit" href="{{ page_data.edit_url }}">Edit and arrange sections</a>{% endif %}{{ page_data.editorial_sections }}</section>{% endif %}
+</div>

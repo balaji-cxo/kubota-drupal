@@ -1,0 +1,22 @@
+uuid: 3a27a920-d64b-4fa0-a513-2a8c74f7bc36
+langcode: en
+status: false
+dependencies:
+  module:
+    - system
+  theme:
+    - terra_gear
+_core:
+  default_config_hash: eYL19CLDyinGTWYQfBD1DswWzglEotE_kHnHx3AxTXM
+id: terra_gear_powered
+theme: terra_gear
+region: primary_menu
+weight: 0
+provider: null
+plugin: system_powered_by_block
+settings:
+  id: system_powered_by_block
+  label: 'Powered by Drupal'
+  label_display: '0'
+  provider: system
+visibility: {  }

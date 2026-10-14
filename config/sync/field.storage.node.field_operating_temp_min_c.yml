@@ -1,0 +1,20 @@
+uuid: 87b412de-5982-4366-a46c-3b4803ab1a7c
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_operating_temp_min_c
+field_name: field_operating_temp_min_c
+entity_type: node
+type: decimal
+settings:
+  precision: 6
+  scale: 2
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

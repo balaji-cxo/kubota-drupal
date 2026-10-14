@@ -1,0 +1,8 @@
+<form class="machine-finder{{ compact ? ' machine-finder--compact' : '' }}{{ hero ? ' machine-finder--hero' : '' }}" action="{{ action }}" method="get" data-machine-finder>
+  <div class="machine-finder__fields">
+    <label>{% if hero %}<span class="visually-hidden">Make</span>{% else %}Make{% endif %}<select name="make" data-machine-make><option value="">Select Make</option>{% for item in machines.makes %}<option value="{{ item.id }}">{{ item.label }}</option>{% endfor %}</select></label>
+    <label>{% if hero %}<span class="visually-hidden">Machine Type</span>{% else %}Machine Type{% endif %}<select name="type" data-machine-type><option value="">Select Machine Type</option>{% for item in machines.types %}<option value="{{ item.id }}">{{ item.label }}</option>{% endfor %}</select></label>
+    <label>{% if hero %}<span class="visually-hidden">Model</span>{% else %}Model{% endif %}<select name="model" data-machine-model><option value="">Select Model</option>{% for item in machines.models %}<option value="{{ item.id }}" data-make="{{ item.make }}" data-type="{{ item.type }}">{{ item.label }}</option>{% endfor %}</select></label>
+    <button class="button button--accent" type="submit">{{ hero ? 'Find Compatible Parts' : 'Find Parts' }} {{ include('terra_gear:icon', {name: 'arrow-right'}) }}</button>
+  </div>
+</form>

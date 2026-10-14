@@ -1,0 +1,19 @@
+uuid: 80fc6964-6250-4489-8972-29c50bcb1cc6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_heading
+    - paragraphs.paragraphs_type.category_grid
+id: paragraph.category_grid.field_heading
+field_name: field_heading
+entity_type: paragraph
+bundle: category_grid
+label: Heading
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

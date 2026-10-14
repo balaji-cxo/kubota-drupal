@@ -1,0 +1,11 @@
+name: Product card
+status: stable
+props:
+  type: object
+  properties:
+    product:
+      type: object
+    compact:
+      type: boolean
+    variant:
+      type: string

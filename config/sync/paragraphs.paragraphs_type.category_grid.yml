@@ -1,0 +1,10 @@
+uuid: 772e64d0-9c0c-498a-86f9-71c5a30a267f
+langcode: en
+status: true
+dependencies: {  }
+id: category_grid
+label: 'Category Grid'
+icon_uuid: null
+icon_default: null
+description: null
+behavior_plugins: {  }

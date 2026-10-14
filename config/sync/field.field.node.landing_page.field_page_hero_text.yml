@@ -1,0 +1,22 @@
+uuid: d8d24fd1-16e0-41bb-8e91-d9d7ce210d31
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_page_hero_text
+    - node.type.landing_page
+  module:
+    - text
+id: node.landing_page.field_page_hero_text
+field_name: field_page_hero_text
+entity_type: node
+bundle: landing_page
+label: 'Page Hero Text'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

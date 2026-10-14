@@ -1,0 +1,38 @@
+uuid: 29c2fcc2-b2ac-492a-94ef-4ae810484366
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.benefits_strip
+    - field.storage.block_content.field_benefit_4_icon
+  module:
+    - image
+id: block_content.benefits_strip.field_benefit_4_icon
+field_name: field_benefit_4_icon
+entity_type: block_content
+bundle: benefits_strip
+label: 'Benefit 4 icon'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings: {  }
+  file_directory: benefits
+  file_extensions: 'png gif jpg jpeg webp'
+  max_filesize: ''
+  max_resolution: ''
+  min_resolution: ''
+  alt_field: true
+  alt_field_required: true
+  title_field: false
+  title_field_required: false
+  default_image:
+    uuid: null
+    alt: ''
+    title: ''
+    width: null
+    height: null
+field_type: image

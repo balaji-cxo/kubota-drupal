@@ -1,0 +1,21 @@
+uuid: 9eb23c6d-acf3-4631-8af4-4853c1f8f03c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_dealer_phone
+    - node.type.dealer
+  module:
+    - telephone
+id: node.dealer.field_dealer_phone
+field_name: field_dealer_phone
+entity_type: node
+bundle: dealer
+label: 'Phone number'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: telephone

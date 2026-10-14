@@ -1,0 +1,38 @@
+uuid: 8d3238dc-8dd7-43da-bc1c-10c86c4650f4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_dealer_photo
+    - node.type.dealer
+  module:
+    - image
+id: node.dealer.field_dealer_photo
+field_name: field_dealer_photo
+entity_type: node
+bundle: dealer
+label: 'Dealer photo'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings: {  }
+  file_directory: dealers
+  file_extensions: 'png gif jpg jpeg webp'
+  max_filesize: ''
+  max_resolution: ''
+  min_resolution: ''
+  alt_field: true
+  alt_field_required: true
+  title_field: false
+  title_field_required: false
+  default_image:
+    uuid: null
+    alt: ''
+    title: ''
+    width: null
+    height: null
+field_type: image

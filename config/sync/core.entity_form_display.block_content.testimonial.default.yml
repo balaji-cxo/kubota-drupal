@@ -1,0 +1,69 @@
+uuid: 7d160958-8822-494c-af6d-775fdea7b57a
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.testimonial
+    - field.field.block_content.testimonial.field_testimonial_company
+    - field.field.block_content.testimonial.field_testimonial_person
+    - field.field.block_content.testimonial.field_testimonial_portrait
+    - field.field.block_content.testimonial.field_testimonial_quote
+    - field.field.block_content.testimonial.field_testimonial_role
+    - image.style.thumbnail
+  module:
+    - image
+    - text
+id: block_content.testimonial.default
+targetEntityType: block_content
+bundle: testimonial
+mode: default
+content:
+  field_testimonial_company:
+    type: string_textfield
+    weight: 4
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_testimonial_person:
+    type: string_textfield
+    weight: 2
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_testimonial_portrait:
+    type: image_image
+    weight: 5
+    region: content
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+  field_testimonial_quote:
+    type: text_textarea
+    weight: 1
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_testimonial_role:
+    type: string_textfield
+    weight: 3
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  info:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden: {  }

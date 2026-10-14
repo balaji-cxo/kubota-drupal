@@ -1,0 +1,30 @@
+uuid: 3b4533ab-f26c-4951-aeeb-60d23df260ad
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.dealer
+    - node.type.landing_page
+    - node.type.product
+  module:
+    - comment
+    - frontend_editing
+    - node
+id: catalog_editor
+label: 'Catalogue Editor'
+weight: 4
+is_admin: false
+permissions:
+  - 'access content overview'
+  - 'access frontend editing'
+  - 'add paragraphs'
+  - 'create dealer content'
+  - 'create landing_page content'
+  - 'create product content'
+  - 'delete paragraphs'
+  - 'edit any dealer content'
+  - 'edit any landing_page content'
+  - 'edit any product content'
+  - 'move paragraphs'
+  - 'post comments'
+  - 'skip comment approval'

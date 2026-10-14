@@ -1,0 +1,8 @@
+uuid: b007aba6-7a28-4e5a-bea2-850c5ffcb4eb
+langcode: en
+status: true
+dependencies: {  }
+id: testimonial
+label: Testimonial
+revision: true
+description: 'A reusable customer quote.'

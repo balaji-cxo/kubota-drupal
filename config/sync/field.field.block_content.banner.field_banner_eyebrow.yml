@@ -1,0 +1,19 @@
+uuid: 21fdcf29-4645-4c05-b2e5-ed364a2b4e0c
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.banner
+    - field.storage.block_content.field_banner_eyebrow
+id: block_content.banner.field_banner_eyebrow
+field_name: field_banner_eyebrow
+entity_type: block_content
+bundle: banner
+label: 'Eyebrow text'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

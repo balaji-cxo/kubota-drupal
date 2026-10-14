@@ -1,0 +1,23 @@
+uuid: 6e856f2f-3630-407d-a854-7e5ddada266a
+langcode: en
+status: true
+dependencies:
+  module:
+    - file
+    - node
+id: node.field_document_cad
+field_name: field_document_cad
+entity_type: node
+type: file
+settings:
+  target_type: file
+  display_field: false
+  display_default: false
+  uri_scheme: public
+module: file
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

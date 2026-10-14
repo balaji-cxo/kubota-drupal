@@ -1,0 +1,8 @@
+uuid: ec859d08-9100-4b13-8adc-47e2bcf14a72
+langcode: en
+status: true
+dependencies: {  }
+id: banner
+label: Banner
+revision: true
+description: 'Reusable hero or promotional banner.'

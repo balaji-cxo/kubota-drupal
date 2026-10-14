@@ -1,0 +1,22 @@
+uuid: 3cede09a-4347-40e8-bfce-29fea2b8e8de
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - terra_gear
+_core:
+  default_config_hash: erQSEZF2XUjNmgTl0uNRBzmg18ZGXwUcw2FhApoeuHk
+id: terra_gear_content
+theme: terra_gear
+region: content
+weight: 0
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  label_display: '0'
+  provider: system
+visibility: {  }

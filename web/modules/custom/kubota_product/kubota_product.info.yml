@@ -1,0 +1,7 @@
+name: Kubota Product
+type: module
+description: Validates unique Product part numbers.
+package: Custom
+core_version_requirement: ^11
+dependencies:
+  - drupal:node

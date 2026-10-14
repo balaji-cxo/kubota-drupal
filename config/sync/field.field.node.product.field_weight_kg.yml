@@ -1,0 +1,23 @@
+uuid: 858b5b78-d7e6-42a4-a37a-27abe5751fe9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_weight_kg
+    - node.type.product
+id: node.product.field_weight_kg
+field_name: field_weight_kg
+entity_type: node
+bundle: product
+label: 'Weight (kg)'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: 0.0
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: decimal

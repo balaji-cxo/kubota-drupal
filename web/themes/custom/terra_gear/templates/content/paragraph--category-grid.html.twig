@@ -1,0 +1,5 @@
+<section{{ attributes.addClass('section', 'container') }}>
+  <div class="section-heading"><div><span class="eyebrow eyebrow--dark">FIND THE RIGHT PART</span><h2>{{ paragraph.field_heading.value ?: 'Popular Categories' }}</h2></div><a href="{{ path('kubota_catalog.catalog') }}">View All →</a></div>
+  <div class="category-grid">{% for category in editorial_categories %}{{ include('terra_gear:category-card', {category: category}) }}{% endfor %}</div>
+  {{ content.frontend_editing }}
+</section>

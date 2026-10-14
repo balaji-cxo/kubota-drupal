@@ -1,0 +1,10 @@
+uuid: cca0b770-f673-4470-8d34-dc6bda0290ea
+langcode: en
+status: true
+dependencies: {  }
+id: editorial_products
+label: 'Curated Products'
+icon_uuid: null
+icon_default: null
+description: null
+behavior_plugins: {  }

@@ -1,0 +1,25 @@
+uuid: 53f0e510-e8d3-4a73-a440-83ceadba3d4a
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.main
+  module:
+    - system
+  theme:
+    - terra_gear
+id: terragear_main_navigation
+theme: terra_gear
+region: primary_menu
+weight: 0
+provider: null
+plugin: 'system_menu_block:main'
+settings:
+  id: 'system_menu_block:main'
+  label: 'Main navigation'
+  label_display: ''
+  provider: system
+  level: 1
+  depth: 2
+  expand_all_items: true
+visibility: {  }

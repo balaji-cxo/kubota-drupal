@@ -1,0 +1,65 @@
+<div class="home-page">
+  <section class="home-hero" {% if page_data.hero.image %}style="--hero-image: url('{{ page_data.hero.image }}')"{% endif %}>
+    <div class="container home-hero__inner">
+      <div class="home-hero__copy">
+        <span class="eyebrow">{{ page_data.hero.eyebrow ?: 'PRECISION PARTS. PROVEN DURABILITY.' }}</span>
+        <h1>{{ page_data.hero.heading ?: 'Precision parts. Guaranteed fitment.' }}</h1>
+        <p>{{ page_data.hero.text ?: 'Engineered for maximum uptime in agriculture and construction.' }}</p>
+        <div class="hero-trust" aria-label="TerraGear commitments">
+          <div class="hero-trust__item">{{ include('terra_gear:icon', {name: 'shield-check'}) }}<span>OEM Quality</span></div>
+          <div class="hero-trust__item">{{ include('terra_gear:icon', {name: 'gear'}) }}<span>Field Tested</span></div>
+          <div class="hero-trust__item">{{ include('terra_gear:icon', {name: 'globe'}) }}<span>Global Support</span></div>
+          <div class="hero-trust__item">{{ include('terra_gear:icon', {name: 'shield'}) }}<span>Built to Last</span></div>
+        </div>
+      </div>
+      <div class="hero-finder">
+        <div class="finder-tabs" role="tablist" aria-label="Find parts">
+          <button type="button" class="is-active" data-finder-tab="machine">Find Parts by Machine</button>
+          <button type="button" data-finder-tab="part">Search by Part Number</button>
+          <button type="button" disabled title="Ask AI is a design preview only">Ask AI <span class="ai-preview" aria-hidden="true">AI</span><span class="visually-hidden">Design preview only</span></button>
+        </div>
+        <div data-finder-panel="machine">{{ include('terra_gear:machine-finder', {machines: page_data.machines, action: path('kubota_catalog.catalog'), hero: true}) }}</div>
+        <form class="part-search is-hidden" action="{{ path('kubota_catalog.catalog') }}" method="get" data-finder-panel="part">
+          <label for="part-search">Enter a part number</label>
+          <div><input id="part-search" name="q" type="search" placeholder="e.g. TG450x86x55"><button class="button button--accent" type="submit">Search Parts →</button></div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  {% if not page_data.editorial_sections %}
+  <section class="section container">
+    <div class="section-heading"><div><span class="eyebrow eyebrow--dark">FIND THE RIGHT PART</span><h2>Popular Categories</h2></div><a href="{{ path('kubota_catalog.catalog') }}">View All →</a></div>
+    <div class="category-grid">{% for category in page_data.categories %}{{ include('terra_gear:category-card', {category: category}) }}{% endfor %}</div>
+  </section>
+
+  <section class="section section--tint">
+    <div class="container">
+      <div class="section-heading"><div><span class="eyebrow eyebrow--dark">ENGINEERED TO PERFORM</span><h2>Featured Products</h2></div><a href="{{ path('kubota_catalog.catalog') }}">Explore all products →</a></div>
+      <div class="product-grid">{% for product in page_data.products %}{{ include('terra_gear:product-card', {product: product, variant: 'featured'}) }}{% endfor %}</div>
+    </div>
+  </section>
+
+  {% if page_data.promo %}
+  <section class="container promo-section">
+    <div class="promo-banner" {% if page_data.promo.image %}style="--promo-image: url('{{ page_data.promo.image }}')"{% endif %}>
+      <div><span class="eyebrow">BUILT TO KEEP YOU MOVING</span><h2>{{ page_data.promo.heading }}</h2><p>{{ page_data.promo.text }}</p><a class="button button--light" href="{{ page_data.promo.cta_url ?: path('kubota_catalog.catalog') }}">{{ page_data.promo.cta_title ?: 'Learn More' }} →</a></div>
+    </div>
+  </section>
+  {% endif %}
+  {{ include('terra_gear:benefits-strip', {industrial: true}) }}
+
+  {% if page_data.testimonials %}
+  <section class="section container testimonial-section">
+    <div class="section-heading"><div><span class="eyebrow eyebrow--dark">PROVEN IN THE FIELD</span><h2>Trusted by Professionals</h2></div></div>
+    <div class="testimonial-slider" data-testimonial-slider>
+      {% for quote in page_data.testimonials %}
+      <figure class="testimonial{{ not loop.first ? ' is-hidden' : '' }}"><blockquote>“{{ quote.quote }}”</blockquote><figcaption><strong>{{ quote.person }}</strong><span>{{ quote.role }}{% if quote.company %} · {{ quote.company }}{% endif %}</span></figcaption></figure>
+      {% endfor %}
+      <div class="slider-actions"><button type="button" data-slide-prev aria-label="Previous testimonial">‹</button><button type="button" data-slide-next aria-label="Next testimonial">›</button></div>
+    </div>
+  </section>
+  {% endif %}
+  {% endif %}
+  {% if page_data.editorial_sections %}<div class="home-sections">{% if page_data.edit_url %}<div class="container"><a class="editorial-edit" href="{{ page_data.edit_url }}">Edit and arrange sections</a></div>{% endif %}{{ page_data.editorial_sections }}</div>{% endif %}
+</div>

@@ -1,0 +1,27 @@
+uuid: d53dd69b-71e5-4c42-87df-125330396062
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.benefits_strip
+    - field.storage.node.field_benefits_strip
+    - node.type.landing_page
+id: node.landing_page.field_benefits_strip
+field_name: field_benefits_strip
+entity_type: node
+bundle: landing_page
+label: 'Benefits strip'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:block_content'
+  handler_settings:
+    target_bundles:
+      benefits_strip: benefits_strip
+    sort:
+      field: _none
+    auto_create: false
+field_type: entity_reference

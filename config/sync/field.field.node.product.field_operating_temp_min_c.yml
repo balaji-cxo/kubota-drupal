@@ -1,0 +1,23 @@
+uuid: c4a38c72-53bc-4dcb-a8b1-ec69cb3f434a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_operating_temp_min_c
+    - node.type.product
+id: node.product.field_operating_temp_min_c
+field_name: field_operating_temp_min_c
+entity_type: node
+bundle: product
+label: 'Minimum operating temperature (°C)'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: decimal

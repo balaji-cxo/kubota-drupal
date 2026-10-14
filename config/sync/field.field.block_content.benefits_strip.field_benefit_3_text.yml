@@ -1,0 +1,19 @@
+uuid: 20f526c1-541f-43c9-ad8e-d90a6550ebc7
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.benefits_strip
+    - field.storage.block_content.field_benefit_3_text
+id: block_content.benefits_strip.field_benefit_3_text
+field_name: field_benefit_3_text
+entity_type: block_content
+bundle: benefits_strip
+label: 'Benefit 3 text'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,19 @@
+uuid: ae6ab157-5d53-4c04-956b-2a9521b12537
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_dealer_city
+    - node.type.dealer
+id: node.dealer.field_dealer_city
+field_name: field_dealer_city
+entity_type: node
+bundle: dealer
+label: City
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
